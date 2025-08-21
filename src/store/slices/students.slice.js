@@ -42,7 +42,6 @@ export const createStudentThunk = (data) => (dispatch) => {
   axios
     .post(BASE_URL, data)
     .then((res) => {
-      // JSONPlaceholder no guarda, pero devuelve lo enviado + un id
       dispatch(addStudent(res.data))
     })
     .catch((err) => console.error(err))
